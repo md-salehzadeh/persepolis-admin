@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.code-block {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.code-block pre[data-language] {
+	--hljs-foreground: #fff;
+}
+
+.code-block pre[data-language] code {
+	border-radius: 8px;
+}

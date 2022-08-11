@@ -1,0 +1,11 @@
+@font-face {
+    font-family: IranNastaliq;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('/assets/fonts/IranNastaliq/IranNastaliq-Web.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/IranNastaliq/IranNastaliq-Web.woff') format('woff'),
+    url('/assets/fonts/IranNastaliq/IranNastaliq-Web.woff2') format('woff2'),
+    url('/assets/fonts/IranNastaliq/IranNastaliq-Web.ttf')  format('truetype'),
+    url('/assets/fonts/IranNastaliq/IranNastaliq-Web.svg#IranNastaliq-Web') format('svg');
+}
