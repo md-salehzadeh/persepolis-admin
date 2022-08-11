@@ -38,10 +38,6 @@
 	];
 </script>
 
-<svelte:head>
-	<link rel="stylesheet" href="https://unpkg.com/svelte-highlight/styles/atom-one-dark.css" />
-</svelte:head>
-
 <div class="pl-5 pr-5">
 	<DocSection class="mb-10" id="basics" title="Basics" code={codeBlocks[0]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
