@@ -5,45 +5,54 @@
 
 	let codeBlocks = [
 `
-<Button>Default</Button>
+<Button>Primary</Button>
+<Button color="secondary">Secondary</Button>
+<Button color="info">Info</Button>
+<Button color="success">Success</Button>
+<Button color="warning">Warning</Button>
+<Button color="danger">Danger</Button>
+<Button color="purple">Purple</Button>
+<Button color="light">Light</Button>
 <Button color="alternative">Alternative</Button>
 <Button color="dark">Dark</Button>
-<Button color="light">Light</Button>
-<Button color="green">Green</Button>
-<Button color="red">Red</Button>
-<Button color="yellow">Yellow</Button>
-<Button color="purple">Purple</Button>
 `,
 
 `
-<Button pill={true}>Default</Button>
+<Button pill={true}>Primary</Button>
+<Button color="secondary" pill={true}>Secondary</Button>
+<Button color="info" pill={true}>Info</Button>
+<Button color="success" pill={true}>Success</Button>
+<Button color="warning" pill={true}>Warning</Button>
+<Button color="danger" pill={true}>Danger</Button>
+<Button color="purple" pill={true}>Purple</Button>
+<Button color="light" pill={true}>Light</Button>
 <Button color="alternative" pill={true}>Alternative</Button>
 <Button color="dark" pill={true}>Dark</Button>
-<Button color="light" pill={true}>Light</Button>
-<Button color="green" pill={true}>Green</Button>
-<Button color="red" pill={true}>Red</Button>
-<Button color="yellow" pill={true}>Yellow</Button>
-<Button color="purple" pill={true}>Purple</Button>
 `,
 
 `
-<Button outline>Default</Button>
-<Button outline color="dark">Dark</Button>
-<Button outline color="green">Green</Button>
-<Button outline color="red">Red</Button>
-<Button outline color="yellow">Yellow</Button>
+<Button outline>Primary</Button>
+<Button outline color="secondary">Secondary</Button>
+<Button outline color="info">Info</Button>
+<Button outline color="success">Success</Button>
+<Button outline color="warning">Warning</Button>
+<Button outline color="danger">Danger</Button>
 <Button outline color="purple">Purple</Button>
+<Button outline color="dark">Dark</Button>
 `,
 
 `
-<Button gradient color="blue">Blue</Button>
-<Button gradient color="green">Green</Button>
+<Button gradient>Primary</Button>
+<Button gradient color="secondary">Secondary</Button>
+<Button gradient color="info">Info</Button>
+<Button gradient color="success">Success</Button>
+<Button gradient color="warning">Warning</Button>
+<Button gradient color="danger">Danger</Button>
+<Button gradient color="purple">Purple</Button>
+<Button gradient color="pink">Pink</Button>
 <Button gradient color="cyan">Cyan</Button>
 <Button gradient color="teal">Teal</Button>
 <Button gradient color="lime">Lime</Button>
-<Button gradient color="red">Red</Button>
-<Button gradient color="pink">Pink</Button>
-<Button gradient color="purple">Purple</Button>
 `,
 
 `
@@ -67,14 +76,17 @@
 `,
 
 `
-<Button shadow="blue" gradient color="blue">Blue</Button>
-<Button shadow="green" gradient color="green">Green</Button>
+<Button shadow="primary" gradient color="primary">Primary</Button>
+<Button shadow="secondary" gradient color="secondary">Secondary</Button>
+<Button shadow="info" gradient color="info">Info</Button>
+<Button shadow="success" gradient color="success">Success</Button>
+<Button shadow="warning" gradient color="warning">Warning</Button>
+<Button shadow="danger" gradient color="danger">Danger</Button>
+<Button shadow="purple" gradient color="purple">Purple</Button>
+<Button shadow="pink" gradient color="pink">Pink</Button>
 <Button shadow="cyan" gradient color="cyan">Cyan</Button>
 <Button shadow="teal" gradient color="teal">Teal</Button>
 <Button shadow="lime" gradient color="lime">Lime</Button>
-<Button shadow="red" gradient color="red">Red</Button>
-<Button shadow="pink" gradient color="pink">Pink</Button>
-<Button shadow="purple" gradient color="purple">Purple</Button>
 `,
 
 `
@@ -86,7 +98,7 @@
 `,
 
 `
-<Button icon="user" iconType="fa-solid" iconSize="md" iconAlign="right" iconClass="...">Profile</Button>
+<Button icon="user" iconType="fa-solid" iconSize="md" iconAlign="right">Profile</Button>
 <Button><Icon type="fa-regular" icon="cart-shopping" class="mr-2" /> Buy Now</Button>
 <Button>Choose Plan <Icon type="fa-regular" icon="arrow-right" class="ml-2" /></Button>
 `,
@@ -112,51 +124,60 @@
 <div class="pl-5 pr-5">
 	<DocSection class="mb-10" id="default-button" title="Default button" code={codeBlocks[0]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Button>Default</Button>
+			<Button>Primary</Button>
+			<Button color="secondary">Secondary</Button>
+			<Button color="info">Info</Button>
+			<Button color="success">Success</Button>
+			<Button color="warning">Warning</Button>
+			<Button color="danger">Danger</Button>
+			<Button color="purple">Purple</Button>
+			<Button color="light">Light</Button>
 			<Button color="alternative">Alternative</Button>
 			<Button color="dark">Dark</Button>
-			<Button color="light">Light</Button>
-			<Button color="green">Green</Button>
-			<Button color="red">Red</Button>
-			<Button color="yellow">Yellow</Button>
-			<Button color="purple">Purple</Button>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="button-pills" title="Button pills" code={codeBlocks[1]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Button pill={true}>Default</Button>
+			<Button pill={true}>Primary</Button>
+			<Button color="secondary" pill={true}>Secondary</Button>
+			<Button color="info" pill={true}>Info</Button>
+			<Button color="success" pill={true}>Success</Button>
+			<Button color="warning" pill={true}>Warning</Button>
+			<Button color="danger" pill={true}>Danger</Button>
+			<Button color="purple" pill={true}>Purple</Button>
+			<Button color="light" pill={true}>Light</Button>
 			<Button color="alternative" pill={true}>Alternative</Button>
 			<Button color="dark" pill={true}>Dark</Button>
-			<Button color="light" pill={true}>Light</Button>
-			<Button color="green" pill={true}>Green</Button>
-			<Button color="red" pill={true}>Red</Button>
-			<Button color="yellow" pill={true}>Yellow</Button>
-			<Button color="purple" pill={true}>Purple</Button>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="outline-buttons" title="Outline buttons" code={codeBlocks[2]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Button outline>Default</Button>
-			<Button outline color="dark">Dark</Button>
-			<Button outline color="green">Green</Button>
-			<Button outline color="red">Red</Button>
-			<Button outline color="yellow">Yellow</Button>
+			<Button outline>Primary</Button>
+			<Button outline color="secondary">Secondary</Button>
+			<Button outline color="info">Info</Button>
+			<Button outline color="success">Success</Button>
+			<Button outline color="warning">Warning</Button>
+			<Button outline color="danger">Danger</Button>
 			<Button outline color="purple">Purple</Button>
+			<Button outline color="dark">Dark</Button>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="gradient-monochrome" title="Gradient monochrome" code={codeBlocks[3]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Button gradient color="blue">Blue</Button>
-			<Button gradient color="green">Green</Button>
+			<Button gradient>Primary</Button>
+			<Button gradient color="secondary">Secondary</Button>
+			<Button gradient color="info">Info</Button>
+			<Button gradient color="success">Success</Button>
+			<Button gradient color="warning">Warning</Button>
+			<Button gradient color="danger">Danger</Button>
+			<Button gradient color="purple">Purple</Button>
+			<Button gradient color="pink">Pink</Button>
 			<Button gradient color="cyan">Cyan</Button>
 			<Button gradient color="teal">Teal</Button>
 			<Button gradient color="lime">Lime</Button>
-			<Button gradient color="red">Red</Button>
-			<Button gradient color="pink">Pink</Button>
-			<Button gradient color="purple">Purple</Button>
 		</div>
 	</DocSection>
 
@@ -186,14 +207,17 @@
 
 	<DocSection class="mb-10" id="colored-shadows" title="Colored shadows" code={codeBlocks[6]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Button shadow="blue" gradient color="blue">Blue</Button>
-			<Button shadow="green" gradient color="green">Green</Button>
+			<Button shadow="primary" gradient color="primary">Primary</Button>
+			<Button shadow="secondary" gradient color="secondary">Secondary</Button>
+			<Button shadow="info" gradient color="info">Info</Button>
+			<Button shadow="success" gradient color="success">Success</Button>
+			<Button shadow="warning" gradient color="warning">Warning</Button>
+			<Button shadow="danger" gradient color="danger">Danger</Button>
+			<Button shadow="purple" gradient color="purple">Purple</Button>
+			<Button shadow="pink" gradient color="pink">Pink</Button>
 			<Button shadow="cyan" gradient color="cyan">Cyan</Button>
 			<Button shadow="teal" gradient color="teal">Teal</Button>
 			<Button shadow="lime" gradient color="lime">Lime</Button>
-			<Button shadow="red" gradient color="red">Red</Button>
-			<Button shadow="pink" gradient color="pink">Pink</Button>
-			<Button shadow="purple" gradient color="purple">Purple</Button>
 		</div>
 	</DocSection>
 

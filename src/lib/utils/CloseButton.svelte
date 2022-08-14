@@ -9,15 +9,15 @@
 	export let size = 'md';
 
 	const colors = {
-		gray: 'focus:ring-gray-400 hover:bg-gray-200 dark:hover:bg-gray-300',
-		red: 'focus:ring-red-400 hover:bg-red-200 dark:hover:bg-red-300',
-		yellow: 'focus:ring-yellow-400 hover:bg-yellow-200 dark:hover:bg-yellow-300',
-		green: 'focus:ring-green-400 hover:bg-green-200 dark:hover:bg-green-300',
-		indigo: 'focus:ring-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-300',
-		purple: 'focus:ring-purple-400 hover:bg-purple-200 dark:hover:bg-purple-300',
+		default: 'focus:ring-gray-300 hover:bg-gray-200',
+		info: 'focus:ring-blue-400 hover:bg-blue-200 dark:hover:bg-blue-300',
+		success: 'focus:ring-green-400 hover:bg-green-200 dark:hover:bg-green-300',
+		warning: 'focus:ring-yellow-400 hover:bg-yellow-200 dark:hover:bg-yellow-300',
+		danger: 'focus:ring-red-400 hover:bg-red-200 dark:hover:bg-red-300',
 		pink: 'focus:ring-pink-400 hover:bg-pink-200 dark:hover:bg-pink-300',
-		blue: 'focus:ring-blue-400 hover:bg-blue-200 dark:hover:bg-blue-300',
-		default: 'focus:ring-gray-300'
+		purple: 'focus:ring-purple-400 hover:bg-purple-200 dark:hover:bg-purple-300',
+		indigo: 'focus:ring-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-300',
+		gray: 'focus:ring-gray-400 hover:bg-gray-200 dark:hover:bg-gray-300',
 	};
 
 	const sizing = {
@@ -31,7 +31,7 @@
 	$: buttonClass = classNames(
 		'ml-auto focus:outline-none',
 		sizing[size],
-		colors[color],
+		colors[color] ?? colors.default,
 		(color === 'default') && (background ? 'hover:bg-gray-100 dark:hover:bg-gray-600' : 'hover:bg-gray-100 dark:hover:bg-gray-700'),
 		$$props.class
 	);
