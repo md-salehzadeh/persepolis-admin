@@ -1,10 +1,15 @@
 <script>
 	import Icon from '$components/Icons/Index.svelte'
+	import classNames from 'classnames';
 
-	export let iconName = null;
-	export let iconType = null;
-	export let iconSize = 20;
-	export let iconClass = 'mr-2';
+	export let icon = {};
+
+	$: {
+		icon.type = icon.type ?? 'fa-regular';
+		icon.name = icon.name ?? null;
+		icon.size = icon.size ?? null;
+		icon.class = classNames('mr-2', (icon.class ?? null));
+	}
 </script>
 
 <li class="group flex items-center" {...$$props}>
@@ -12,28 +17,16 @@
 
 	{#if $$props.href}
 		<a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href={$$props.href}>
-			{#if iconName}
-				<svelte:component
-					this={Icon}
-					type={iconType}
-					icon={iconName}
-					size={iconSize}
-					class={iconClass}
-				/>
+			{#if icon.name}
+				<Icon {...icon} />
 			{/if}
 
 			<slot />
 		</a>
 	{:else}
 		<span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">
-			{#if iconName}
-				<svelte:component
-					this={Icon}
-					type={iconType}
-					icon={iconName}
-					size={iconSize}
-					class={iconClass}
-				/>
+			{#if icon.name}
+				<Icon {...icon} />
 			{/if}
 
 			<slot />

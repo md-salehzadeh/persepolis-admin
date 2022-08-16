@@ -7,7 +7,7 @@
 <script>
 	import '../app.css';
 	import Navbar from "./fragments/_navbar.svelte"
-	import Breadcrumb from '$components/Breadcrumbs/Breadcrumb.svelte';
+	import Breadcrumb from '$components/Breadcrumbs/Index.svelte';
 	import BreadcrumbItem from '$components/Breadcrumbs/BreadcrumbItem.svelte';
 </script>
 
