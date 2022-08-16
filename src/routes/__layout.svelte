@@ -23,7 +23,7 @@
 	<main class="px-6 py-5 ml-64">
 		<div class="mb-10">
 			<Breadcrumb class="px-5 py-3 bg-gray-50 dark:bg-gray-900">
-				<BreadcrumbItem href="/" iconType="fa-solid" iconName="house">Home</BreadcrumbItem>
+				<BreadcrumbItem href="/" icon={{name: "house", type: "fa-regular"}}>Home</BreadcrumbItem>
 				<BreadcrumbItem href="/">Projects</BreadcrumbItem>
 				<BreadcrumbItem>Flowbite Svelte</BreadcrumbItem>
 			</Breadcrumb>
