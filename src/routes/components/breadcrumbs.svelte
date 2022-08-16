@@ -5,11 +5,19 @@
 	
 	let codeBlocks = [
 `
-xxx
+<Breadcrumb>
+	<BreadcrumbItem href="/" icon={{name: "home", type: "fa-solid"}}>Home</BreadcrumbItem>
+	<BreadcrumbItem href="/">Projects</BreadcrumbItem>
+	<BreadcrumbItem>Flowbite Svelte</BreadcrumbItem>
+</Breadcrumb>
 `,
 
 `
-xxx
+<Breadcrumb class="bg-gray-50 py-3 px-5 dark:bg-gray-900">
+	<BreadcrumbItem href="/" icon={{name: "home", type: "fa-solid"}}>Home</BreadcrumbItem>
+	<BreadcrumbItem href="/">Projects</BreadcrumbItem>
+	<BreadcrumbItem>Flowbite Svelte</BreadcrumbItem>
+</Breadcrumb>
 `,
 	];
 </script>
