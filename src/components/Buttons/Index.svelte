@@ -161,24 +161,24 @@
 		background is set to bg-white dark:bg-gray-900 -->
 		<span class={gradientOutlineClass}>
 			{#if icon && iconAlign == "left"}
-				<Icon type={iconType} icon={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
+				<Icon type={iconType} name={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
 			{/if}
 
 			<slot />
 		
 			{#if icon && iconAlign == "right"}
-				<Icon type={iconType} icon={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
+				<Icon type={iconType} name={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
 			{/if}
 		</span>
 	{:else}
 		{#if icon && iconAlign == "left"}
-			<Icon type={iconType} icon={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
+			<Icon type={iconType} name={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
 		{/if}
 		
 		<slot />
 		
 		{#if icon && iconAlign == "right"}
-			<Icon type={iconType} icon={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
+			<Icon type={iconType} name={icon} size={iconSize} animation={iconAnimation} duration={iconDuration} class={iconClass} />
 		{/if}
 	{/if}
 </svelte:element>

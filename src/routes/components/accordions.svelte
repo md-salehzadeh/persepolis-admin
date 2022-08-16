@@ -125,7 +125,7 @@
 <AccordionItem id="1">
 	<h2 slot="header">
 		<span class="flex">
-			<span class="mr-2"><Icon type="fa-regular" icon="box-archive" /></span> 
+			<span class="mr-2"><Icon type="fa-regular" name="box-archive" /></span> 
 			My Header 1
 		</span>
 	</h2>
@@ -138,7 +138,7 @@
 
 <AccordionItem id="2">
 	<h2 slot="header"><span class="flex ">
-		<span class="mr-2"><Icon type="fa-regular" icon="flask" /></span> 
+		<span class="mr-2"><Icon type="fa-regular" name="flask" /></span> 
 			My Header 2
 		</span>
 	</h2>
@@ -284,7 +284,7 @@
 			<AccordionItem id="1">
 				<h2 slot="header">
 					<span class="flex">
-						<span class="mr-2"><Icon type="fa-regular" icon="box-archive" /></span> 
+						<span class="mr-2"><Icon type="fa-regular" name="box-archive" /></span> 
 						My Header 1
 					</span>
 				</h2>
@@ -297,7 +297,7 @@
 
 			<AccordionItem id="2">
 				<h2 slot="header"><span class="flex ">
-					<span class="mr-2"><Icon type="fa-regular" icon="flask" /></span> 
+					<span class="mr-2"><Icon type="fa-regular" name="flask" /></span> 
 						My Header 2
 					</span>
 				</h2>

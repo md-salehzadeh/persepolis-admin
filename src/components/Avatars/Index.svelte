@@ -52,7 +52,7 @@
 		</svelte:element>
 	{:else}
 		<svelte:element this={href ? 'a' : 'div'} class={avatarClass}>
-			<Icon type="fa-solid" icon="user" class="w-full h-full text-gray-500 !overflow-hidden {rounded || null}" />
+			<Icon type="fa-solid" name="user" class="w-full h-full text-gray-500 !overflow-hidden {rounded || null}" />
 		</svelte:element>
 	{/if}
 </Dot>

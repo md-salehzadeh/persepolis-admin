@@ -16,7 +16,7 @@
 <div class="mb-10" id="doc-{sectionId}">
 	<div class="group relative">
 		<a href="#doc-{sectionId}" class="absolute top-[2px] -left-9 hidden group-hover:block">
-			<Icon type="fa-duotone" icon="anchor" size="xl" class="text-blue-600" />
+			<Icon type="fa-duotone" name="anchor" size="xl" class="text-blue-600" />
 		</a>
 	
 		<h1 class="mb-8 text-xl -ml-10 pl-10">{sectionTitle}</h1>

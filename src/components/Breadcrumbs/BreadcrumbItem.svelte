@@ -13,7 +13,7 @@
 </script>
 
 <li class="group flex items-center" {...$$props}>
-	<Icon type="fa-regular" icon="chevron-right" class="mx-1 h-4 w-4 text-gray-400 group-first:hidden" />
+	<Icon type="fa-regular" name="chevron-right" class="mx-1 h-4 w-4 text-gray-400 group-first:hidden" />
 
 	{#if $$props.href}
 		<a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href={$$props.href}>

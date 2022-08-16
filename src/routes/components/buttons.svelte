@@ -99,8 +99,8 @@
 
 `
 <Button icon="user" iconType="fa-solid" iconSize="md" iconAlign="right">Profile</Button>
-<Button><Icon type="fa-regular" icon="cart-shopping" class="mr-2" /> Buy Now</Button>
-<Button>Choose Plan <Icon type="fa-regular" icon="arrow-right" class="ml-2" /></Button>
+<Button><Icon type="fa-regular" name="cart-shopping" class="mr-2" /> Buy Now</Button>
+<Button>Choose Plan <Icon type="fa-regular" name="arrow-right" class="ml-2" /></Button>
 `,
 
 `
@@ -234,8 +234,8 @@
 	<DocSection class="mb-10" id="buttons-with-icon" title="Buttons with icon" code={codeBlocks[8]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
 			<Button icon="user" iconType="fa-solid" iconSize="md" iconAlign="right">Profile</Button>
-			<Button><Icon type="fa-regular" icon="cart-shopping" class="mr-2" /> Buy Now</Button>
-			<Button>Choose Plan <Icon type="fa-regular" icon="arrow-right" class="ml-2" /></Button>
+			<Button><Icon type="fa-regular" name="cart-shopping" class="mr-2" /> Buy Now</Button>
+			<Button>Choose Plan <Icon type="fa-regular" name="arrow-right" class="ml-2" /></Button>
 		</div>
 	</DocSection>
 

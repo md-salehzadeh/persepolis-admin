@@ -15,7 +15,7 @@
 
 	$: {
 		icon.type = icon.type ?? 'fa-regular';
-		icon.icon = open ? (icon.up ?? 'chevron-up') : (icon.down ?? 'chevron-down');
+		icon.name = open ? (icon.up ?? 'chevron-up') : (icon.down ?? 'chevron-down');
 		icon.size = icon.size ?? null;
 		icon.class = classNames('mr-2', (icon.class ?? 'text-gray-500 sm:w-6 sm:h-6 dark:text-gray-300'));
 	}

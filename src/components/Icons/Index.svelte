@@ -2,7 +2,7 @@
 	import classNames from 'classnames';
 
 	export let type = 'fa-regular';
-	export let icon = 'question';
+	export let name = 'question';
 	export let size = null;
 	export let fixedWidth = false;
 	export let list = false;
@@ -16,7 +16,7 @@
 	
 	$: classes = classNames(
 		type,
-		`fa-${icon}`,
+		`fa-${name}`,
 		size && `fa-${size}`,
 		fixedWidth && 'fa-fw',
 		list && 'fa-li',

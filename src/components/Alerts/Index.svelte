@@ -92,7 +92,7 @@
 <div id={$$props.id} class:hidden class={divClass} role="alert">
 	<div class="flex items-center">
 		{#if icon}
-			<Icon type={iconType} icon={icon} size={iconSize} class={classNames('flex-shrink-0 mr-3', iconClass)}/>
+			<Icon type={iconType} name={icon} size={iconSize} class={classNames('flex-shrink-0 mr-3', iconClass)}/>
 		{/if}
 
 		<div>

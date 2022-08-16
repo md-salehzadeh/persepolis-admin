@@ -131,7 +131,7 @@
 		</div>
 		
 		<div class="flex gap-2">
-			<Button size="xs"><Icon icon="eye" class="mr-2" />View more</Button>
+			<Button size="xs"><Icon name="eye" class="mr-2" />View more</Button>
 			<Button size="xs" outline color="info">Go to Home</Button>
 		</div>
 	</div>
@@ -284,7 +284,7 @@
 					</div>
 					
 					<div class="flex gap-2">
-						<Button size="xs"><Icon icon="eye" class="mr-2" />View more</Button>
+						<Button size="xs"><Icon name="eye" class="mr-2" />View more</Button>
 						<Button size="xs" outline color="info">Go to Home</Button>
 					</div>
 				</div>
