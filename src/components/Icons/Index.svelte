@@ -14,45 +14,20 @@
 	export let secondaryOpacity = null;
 	export let swapOpacity = false;
 	
-	let className = $$props.class || '';
-
-	let classes = [];
-
-	classes.push(type);
-	
-	if (['fa-regular', 'fa-solid', 'fa-light', 'fa-thin', 'fa-duotone'].includes(type)) {
-		icon = `fa-${icon}`;
-	}
-
-	classes.push(icon);
-
-	if (size) {
-		classes.push(`fa-${size}`);
-	}
-
-	if (fixedWidth) {
-		classes.push('fa-fw');
-	}
-
-	if (list) {
-		classes.push('fa-li');
-	}
-
-	if (animation) {
-		classes.push(`fa-${animation}`);
-	}
-
-	if (swapOpacity) {
-		classes.push(`fa-swap-opacity`);
-	}
-
-	if (className) {
-		classes.push(className);
-	}
+	$: classes = classNames(
+		type,
+		`fa-${icon}`,
+		size && `fa-${size}`,
+		fixedWidth && 'fa-fw',
+		list && 'fa-li',
+		animation && `fa-${animation}`,
+		swapOpacity && 'fa-swap-opacity',
+		$$props.class || null,
+	);
 </script>
 
 <i
-	class="{classNames(classes)}"
+	class="{classes}"
 	style:--fa-animation-duration={duration || null}
 	style:--fa-primary-color={primaryColor || null}
 	style:--fa-primary-opacity={primaryOpacity || null}

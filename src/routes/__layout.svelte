@@ -1,6 +1,7 @@
+
 <svelte:head>
-	<script defer src="/fonts/fontawesome-pro-6.1.1/js/all.js"></script>
-	<!-- <link href="/fonts/fontawesome-pro-6.1.1/css/all.css" rel="stylesheet"> -->
+	<!-- <script defer src="/fonts/fontawesome-pro-6.1.1/js/all.js"></script> -->
+	<link href="/fonts/fontawesome-pro-6.1.1/css/all.css" rel="stylesheet">
 </svelte:head>
 
 <script>
