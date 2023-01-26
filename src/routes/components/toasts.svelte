@@ -522,7 +522,7 @@
 		</div>
 	</DocSection>
 
-	<DocSection class="mb-10" id="positioning" title="Positioning" code={codeBlocks[11]}>
+	<DocSection class="mb-10" id="positioning" title="Positioning" code={codeBlocks[12]}>
 		<div slot="preview">
 			<div class="relative h-56">
 				<Toast simple position="top-left">Top left positioning.</Toast>
