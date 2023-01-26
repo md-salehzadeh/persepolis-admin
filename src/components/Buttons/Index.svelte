@@ -44,8 +44,6 @@
 		iconAnimation = "spin";
 		iconDuration = "0.9s";
 	}
-
-	const background = getContext('background');
 	
 	const colorClasses = {
 		primary: 'text-white bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800',
