@@ -92,7 +92,7 @@
 	Color set to green.
 </Toast>
 
-<Toast  color="" class="mb-2">
+<Toast class="mb-2">
 	<svelte:fragment slot="icon">
 		<Icon type="fa-regular" name="bucket" />
 	</svelte:fragment>
@@ -357,7 +357,7 @@
 				Color set to green.
 			</Toast>
 
-			<Toast  color="" class="mb-2">
+			<Toast class="mb-2">
 				<svelte:fragment slot="icon">
 					<Icon type="fa-regular" name="bucket" />
 				</svelte:fragment>
