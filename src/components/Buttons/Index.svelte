@@ -4,12 +4,15 @@
 	import classNames from 'classnames';
 	import { getContext } from 'svelte';
 
+	const group = getContext('group');
+
 	export let pill = false;
 	export let outline = false;
 	export let gradient = false;
 	export let size = 'md';
 	export let href;
 	export let btnClass;
+	export let type = 'button';
 	export let color = 'primary';
 	export let shadow = null;
 	export let loading = false;
@@ -112,23 +115,54 @@
 		xl: (iconBtn) ? 'p-3.5 text-base' : 'px-6 py-3.5 text-base',
 	};
 
+	function rounded(gradientOutline = false) {
+		if (group) {
+			if (pill) {
+				return 'first:rounded-l-full last:rounded-r-full';
+			} else if (gradientOutline) {
+				return 'first:rounded-l-md last:rounded-r-md';
+			} else {
+				return 'first:rounded-l-lg last:rounded-r-lg';
+			}
+		}
+
+		if (pill) {
+			return 'rounded-full';
+		} else if (gradientOutline) {
+			return 'rounded-md';
+		} else {
+			return 'rounded-lg';
+		}
+	}
+
+	const hasBorder = () => outline || color === 'alternative' || color === 'light';
+
 	let buttonClass;
 
 	$: if (btnClass) {
 		buttonClass = btnClass;
 	} else {
 		buttonClass = classNames(
-			'group text-center font-medium focus:ring-4 focus:outline-none',
-			outline && gradient ? 'p-0.5' : 'inline-flex items-center justify-center ' + sizeClasses[size],
+			'text-center font-medium',
+			group ? 'focus:ring-2' : 'focus:ring-4',
+			group && 'focus:z-10',
+			group || 'focus:outline-none',
+			outline && gradient
+				? 'p-0.5'
+				: 'inline-flex items-center justify-center ' + sizeClasses[size],
 			gradient ? gradientClasses[color] : outline ? outlineClasses[color] : colorClasses[color],
 			color === 'alternative' &&
-				(background
-					? 'dark:bg-transparent dark:border-gray-700 dark:hover:border-gray-600'
+				(group
+					? 'dark:bg-gray-700 dark:text-white dark:border-gray-700 dark:hover:border-gray-600 dark:hover:bg-gray-600'
 					: 'dark:bg-transparent dark:border-gray-800 dark:hover:border-gray-700'),
-			pill ? 'rounded-full' : 'rounded-lg',
+			outline &&
+				color === 'dark' &&
+				(group ? 'dark:text-white dark:border-white' : 'dark:text-gray-400 dark:border-gray-700'),
+			hasBorder() && group && 'border-l-0 first:border-l',
+			rounded(false),
 			shadow && coloredShadowClasses[shadow],
 			$$props.disabled && 'cursor-not-allowed opacity-50',
-			$$props.class
+			$$props.class,
 		);
 	}
 
@@ -137,7 +171,7 @@
 	$: gradientOutlineClass = classNames(
 		'inline-flex items-center justify-center',
 		sizeClasses[size],
-		pill ? 'rounded-full' : 'rounded-md',
+		rounded(true),
 		'bg-white text-gray-900 dark:bg-gray-900 dark:text-white', // this is limitation - no transparency
 		'transition-all duration-75 ease-in group-hover:bg-opacity-0 group-hover:text-inherit'
 	);
@@ -145,7 +179,7 @@
 
 <svelte:element
 	this={href ? 'a' : 'button'}
-	type={href ? undefined : 'button'}
+	type={href ? undefined : type}
 	{...$$restProps}
 	class={buttonClass}
 	on:click
