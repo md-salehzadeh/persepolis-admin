@@ -225,7 +225,7 @@
 `
 <Toast>
 	<div class="flex" slot="extra">
-		<Avatar src='/images/profile-picture-1.webp' />
+		<Avatar rounded src='https://i.pravatar.cc/300' />
 
 		<div class="ml-3 text-sm font-normal">
 			<span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Jese Leos</span>
@@ -241,7 +241,7 @@
 	<span class="font-semibold text-gray-900 dark:text-white">New notification</span>
 
 	<div class="flex items-center mt-3" slot="extra">
-		<Avatar src='/images/profile-picture-3.webp'/>
+		<Avatar rounded src='https://i.pravatar.cc/300'/>
 
 		<div class="ml-3">
 			<h4 class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</h4>
@@ -470,7 +470,7 @@
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
 			<Toast>
 				<div class="flex" slot="extra">
-					<Avatar src='/images/profile-picture-1.webp' />
+					<Avatar rounded src='https://i.pravatar.cc/300' />
 
 					<div class="ml-3 text-sm font-normal">
 						<span class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Jese Leos</span>
@@ -488,7 +488,7 @@
 				<span class="font-semibold text-gray-900 dark:text-white">New notification</span>
 
 				<div class="flex items-center mt-3" slot="extra">
-					<Avatar src='/images/profile-picture-3.webp'/>
+					<Avatar rounded src='https://i.pravatar.cc/300'/>
 
 					<div class="ml-3">
 						<h4 class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</h4>
