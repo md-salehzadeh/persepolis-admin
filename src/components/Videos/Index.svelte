@@ -10,6 +10,7 @@
 	let videoClass = classNames($$props.class);
 </script>
 
+<!-- svelte-ignore a11y-media-has-caption -->
 <video {...$$restProps} class={videoClass}>
 	<source {src} {type} />
 
