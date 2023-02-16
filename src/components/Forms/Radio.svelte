@@ -3,13 +3,13 @@
 	import classNames from 'classnames';
 
 	const colorClasses = {
-		red: 'text-red-600 focus:ring-red-500 dark:focus:ring-red-600',
-		green: 'text-green-600 focus:ring-green-500 dark:focus:ring-green-600',
+		primary: 'text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600',
+		success: 'text-success-600 focus:ring-success-500 dark:focus:ring-success-600',
+		warning: 'text-warning-400 focus:ring-warning-500 dark:focus:ring-warning-600',
+		danger: 'text-danger-600 focus:ring-danger-500 dark:focus:ring-danger-600',
 		purple: 'text-purple-600 focus:ring-purple-500 dark:focus:ring-purple-600',
 		teal: 'text-teal-600 focus:ring-teal-500 dark:focus:ring-teal-600',
-		yellow: 'text-yellow-400 focus:ring-yellow-500 dark:focus:ring-yellow-600',
 		orange: 'text-orange-500 focus:ring-orange-500 dark:focus:ring-orange-600',
-		blue: 'text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-600',
 	};
 
 	export const labelClass = (inline, extraClass) => {
@@ -33,7 +33,7 @@
 	import { getContext } from 'svelte';
 	import Label from '$components/Forms/Label.svelte';
 
-	export let color = 'blue';
+	export let color = 'primary';
 	export let custom = false;
 	export let inline = false;
 	export let group = '';

@@ -4,7 +4,7 @@
 	import Label from '$components/Forms/Label.svelte';
 
 	// properties forwarding
-	export let color = 'blue';
+	export let color = 'primary';
 	export let custom = false;
 	export let inline = false;
 	export let group = [];
