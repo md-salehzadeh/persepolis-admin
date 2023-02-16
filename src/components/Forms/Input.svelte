@@ -44,6 +44,7 @@
 	// you need to this to avoid 2-way binding
 	const setType = (node, _type) => {
 		node.type = _type;
+
 		return {
 			update(_type) {
 				node.type = _type;
