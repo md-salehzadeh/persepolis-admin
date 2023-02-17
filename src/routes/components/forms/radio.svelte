@@ -3,7 +3,6 @@
 	import Radio from '$components/Forms/Radio.svelte';
 	import Label from '$components/Forms/Label.svelte';
 	import Helper from '$components/Forms/Helper.svelte';
-	import Search from '$components/Forms/Search.svelte';
 	import Button from '$components/Buttons/Index.svelte';
 	import Icon from '$components/Icons/Index.svelte';
 	import Dropdown from '$components/Dropdowns/Index.svelte';
