@@ -56,6 +56,7 @@
 			<slot name="header" />
 		</div>
 	{/if}
+
 	<Wrapper show={wrapped} class={innerWrapperClass}>
 		<textarea
 			bind:value
@@ -76,6 +77,7 @@
 			class={textareaClass}
 		/>
 	</Wrapper>
+
 	{#if $$slots.footer}
 		<div class={headerClass(false)}>
 			<slot name="footer" />
