@@ -4,12 +4,13 @@
 
 	const background = getContext('background');
 
-	export let color = 'primary';
+	export let color = 'default';
 	export let name = undefined;
 	export let ariaLabel = undefined;
 	export let size = 'md';
 
 	const colors = {
+		default: 'focus:ring-gray-400',
 		primary: 'text-primary-500 focus:ring-primary-400 hover:bg-primary-200 dark:hover:bg-gray-700',
 		success: 'text-success-500 focus:ring-success-400 hover:bg-success-200 dark:hover:bg-gray-700',
 		warning: 'text-warning-500 focus:ring-warning-400 hover:bg-warning-200 dark:hover:bg-gray-700',
@@ -33,7 +34,7 @@
 		'focus:outline-none whitespace-normal',
 		sizing[size],
 		colors[color],
-		color === 'primary' &&
+		color === 'default' &&
 			(background
 				? 'hover:bg-gray-100 dark:hover:bg-gray-600'
 				: 'hover:bg-gray-100 dark:hover:bg-gray-700'),
