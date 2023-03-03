@@ -1,11 +1,16 @@
 <script>
 	import classNames from 'classnames';
 	import { getContext } from 'svelte';
-	import Wrapper from '../utils/Wrapper.svelte';
-
-	const background = getContext('background');
+	import Wrapper from '$lib/utils/Wrapper.svelte';
 
 	export let value = '';
+	export let background = false;
+
+	let backgroundContext = getContext('background');
+
+	if (typeof backgroundContext != 'undefined') {
+		background = backgroundContext;
+	}
 
 	let wrapped;
 
