@@ -13,7 +13,7 @@
 	let inputClass;
 
 	$: inputClass = classNames(
-		'w-full bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700',
+		'w-full bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 outline-none',
 		sizes[size] ?? sizes.md,
 		$$props.class,
 	);
