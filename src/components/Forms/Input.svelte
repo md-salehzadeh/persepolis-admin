@@ -17,24 +17,22 @@
 
 	const borderClasses = {
 		base: 'border-gray-300 dark:border-gray-600',
+		success: 'border-success-500 dark:border-success-400',
+		danger: 'border-danger-500 dark:border-danger-400',
 		tinted: 'border-gray-300 dark:border-gray-500',
-		green: 'border-green-500 dark:border-green-400',
-		red: 'border-red-500 dark:border-red-400',
 	};
 
 	const ringClasses = {
 		base: 'focus:border-blue-500 focus:ring-blue-500 dark:focus:border-blue-500 dark:focus:ring-blue-500',
-		green:
-			'focus:ring-green-500 focus:border-green-500 dark:focus:border-green-500 dark:focus:ring-green-500',
-		red: 'focus:ring-red-500 focus:border-red-500 dark:focus:ring-red-500 dark:focus:border-red-500',
+		success: 'focus:ring-success-500 focus:border-success-500 dark:focus:border-success-500 dark:focus:ring-success-500',
+		danger: 'focus:ring-danger-500 focus:border-danger-500 dark:focus:ring-danger-500 dark:focus:border-danger-500',
 	};
 
 	const colorClasses = {
 		base: 'bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400',
+		success: 'bg-success-50 text-success-900 placeholder-success-700 dark:text-success-400 dark:placeholder-success-500 dark:bg-gray-700',
+		danger: 'bg-danger-50 text-danger-900 placeholder-danger-700 dark:text-danger-500 dark:placeholder-danger-500 dark:bg-gray-700',
 		tinted: 'bg-gray-50 text-gray-900 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400',
-		green:
-			'bg-green-50 text-green-900 placeholder-green-700 dark:text-green-400 dark:placeholder-green-500 dark:bg-gray-700',
-		red: 'bg-red-50 text-red-900 placeholder-red-700 dark:text-red-500 dark:placeholder-red-500 dark:bg-gray-700',
 	};
 
 	// tinted if put in component having its own background
