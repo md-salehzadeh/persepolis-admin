@@ -1,7 +1,7 @@
 <script>
 	import classNames from 'classnames';
 	import { getContext } from 'svelte';
-	import { clampSize } from '$lib/forms/Input.svelte';
+	import { clampSize } from '$components/Forms/Input.svelte';
 
 	export let size = undefined;
 
