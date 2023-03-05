@@ -1,7 +1,6 @@
 <script>
 	import DocSection from '$components/Docs/Section.svelte';
 	import FloatingLabelInput from '$components/Forms/FloatingLabelInput.svelte';
-	import Label from '$components/Forms/Label.svelte';
 	import Helper from '$components/Forms/Helper.svelte';
 
 	let codeBlocks = [
