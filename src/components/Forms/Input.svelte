@@ -12,7 +12,7 @@
 	export let type = 'text';
 	export let value = '';
 	export let size = undefined;
-	export let defaultClass = 'block w-full disabled:cursor-not-allowed disabled:opacity-50';
+	export let defaultClass = 'block w-full disabled:cursor-not-allowed disabled:opacity-50 border';
 	export let color = 'base';
 
 	const borderClasses = {
