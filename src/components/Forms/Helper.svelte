@@ -5,9 +5,9 @@
 	export let color = 'gray';
 
 	const colorClasses = {
+		success: 'text-success-700 dark:text-success-500',
+		danger: 'text-danger-700 dark:text-danger-500',
 		gray: 'text-gray-900 dark:text-gray-300',
-		green: 'text-green-700 dark:text-green-500',
-		red: 'text-red-700 dark:text-red-500',
 		disabled: 'text-gray-400 dark:text-gray-500',
 	};
 </script>
