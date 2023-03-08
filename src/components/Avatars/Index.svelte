@@ -1,58 +1,56 @@
 <script>
 	import classNames from 'classnames';
-
-	import Icon from '$components/Icons/Index.svelte';
-	import Dot from './Dot.svelte';
+	import AvatarPlaceholder from './Placeholder.svelte';
+	import Indicator from '$components/Indicators/Index.svelte';
 
 	export let src = '';
-	export let href = '#';
-
+	export let href = undefined;
 	export let rounded = false;
 	export let border = false;
 	export let stacked = false;
-
-	export let dot = { top: false, color: 'bg-gray-300 dark:bg-gray-500' };
+	export let dot = undefined;
 	export let alt = '';
 	export let size = 'md';
 
-	if (rounded) {
-		rounded = `rounded-${rounded === true ? 'full' : rounded}`;
-	}
+	$: dot = dot && { placement: 'top-right', color: 'gray', size: 'lg', ...dot };
 
 	const sizes = {
 		xs: 'w-6 h-6',
 		sm: 'w-8 h-8',
 		md: 'w-10 h-10',
 		lg: 'w-20 h-20',
-		xl: 'w-36 h-36'
+		xl: 'w-36 h-36',
 	};
 
 	let avatarClass;
-	
+
 	$: avatarClass = classNames(
-		rounded || null,
+		rounded ? 'rounded' : 'rounded-full',
 		border && 'p-1 ring-2 ring-gray-300 dark:ring-gray-500',
 		sizes[size],
 		stacked && 'border-2 -ml-4 border-white dark:border-gray-800',
-		'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300 overflow-hidden',
-		$$props.class
+		'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-300',
+		$$props.class,
 	);
 </script>
 
-<Dot show={$$props.dot} {rounded} {...dot} {size}>
-	{#if src}
-		<img class={avatarClass} {alt} {src} />
-	{:else if $$slots.default}
-		<svelte:element
-			this={href ? 'a' : 'div'}
-			class="flex justify-center items-center text-xs font-medium {avatarClass}"
-			{href}
-		>
-			<slot />
-		</svelte:element>
-	{:else}
-		<svelte:element this={href ? 'a' : 'div'} class={avatarClass}>
-			<Icon type="fa-solid" name="user" class="w-full h-full text-gray-500 !overflow-hidden {rounded || null}" />
-		</svelte:element>
-	{/if}
-</Dot>
+{#if !src || !!href || $$slots.default || dot}
+	<svelte:element
+		this={href ? 'a' : 'div'}
+		{href}
+		{...$$restProps}
+		class="relative flex justify-center items-center {avatarClass}"
+	>
+		{#if src}
+			<img {alt} {src} class={rounded ? 'rounded' : 'rounded-full'} />
+		{:else}
+			<slot><AvatarPlaceholder {rounded} /></slot>
+		{/if}
+
+		{#if dot}
+			<Indicator border offset={rounded} {...dot} />
+		{/if}
+	</svelte:element>
+{:else}
+	<img {alt} {src} {...$$restProps} class={avatarClass} />
+{/if}
