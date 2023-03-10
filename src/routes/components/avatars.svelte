@@ -76,7 +76,7 @@
 `,
 
 `
-<Avatar id="user-drop" src="https://i.pravatar.cc/300" dot={{color:'green'}} />
+<Avatar id="user-drop" src="https://i.pravatar.cc/300" dot={{color: 'success'}} />
 
 <Dropdown triggeredBy="#user-drop">
 	<DropdownHeader>
@@ -194,7 +194,7 @@
 	
 	<DocSection class="mb-10" id="user-dropdown" title="User dropdown" code={codeBlocks[8]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Avatar id="user-drop" src="https://i.pravatar.cc/300" dot={{color:'green'}} />
+			<Avatar id="user-drop" src="https://i.pravatar.cc/300" dot={{color: 'success'}} />
 
 			<Dropdown triggeredBy="#user-drop">
 				<DropdownHeader>
