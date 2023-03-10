@@ -34,7 +34,8 @@
 <Avatar data-name="Robert Gouth" rounded src="https://i.pravatar.cc/300"/>
 <Avatar data-name="Bonnie Green" rounded src="https://i.pravatar.cc/300"/>
 
-<Tooltip triggeredBy="[data-name]" on:show={e => name = e.target.dataset.name}>{name}</Tooltip>
+<!-- svelte-ignore missing-declaration -->
+<Tooltip triggeredBy="[data-name]" on:show={e => _name = e.target.dataset.name}>{_name}</Tooltip>
 `,
 
 `
@@ -143,7 +144,8 @@
 			<Avatar data-name="Robert Gouth" rounded src="https://i.pravatar.cc/300"/>
 			<Avatar data-name="Bonnie Green" rounded src="https://i.pravatar.cc/300"/>
 
-			<Tooltip triggeredBy="[data-name]" on:show={e => name = e.target.dataset.name}>{name}</Tooltip>
+			<!-- svelte-ignore missing-declaration -->
+			<Tooltip triggeredBy="[data-name]" on:show={e => _name = e.target.dataset.name}>{_name}</Tooltip>
 		</div>
 	</DocSection>
 	
