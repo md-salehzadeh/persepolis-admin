@@ -15,6 +15,10 @@
 `,
 
 `
+<script>
+	let style = 'dark';
+<\/script>
+
 <Button id="style-light">Light tooltip</Button>
 
 <Button id="style-auto">Default tooltip</Button>
@@ -25,6 +29,10 @@
 `,
 
 `
+<script>
+	let placement = 'left';
+<\/script>
+
 <Button id="placement-left">Tooltip left</Button>
 
 <Button id="placement-top">Tooltip top</Button>
