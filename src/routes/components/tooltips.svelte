@@ -3,66 +3,76 @@
 	import Button from '$components/Buttons/Index.svelte';
 	import Tooltip from '$components/Tooltips/Index.svelte';
 
+	let style = 'dark';
+
+	let placement = 'left';
+
 	let codeBlocks = [
 `
-<Tooltip content="Tooltip content">
-	<Button>Default tooltip</Button>
+<Button>Default tooltip</Button>
+
+<Tooltip>Tooltip content</Tooltip>
+`,
+
+`
+<Button id="style-light">Light tooltip</Button>
+
+<Button id="style-auto">Default tooltip</Button>
+
+<Button id="style-dark">Dark tooltip</Button>
+
+<Tooltip {style} triggeredBy="[id^='style-']" on:show={ev => style = ev.target.id.split('-')[1]}>Tooltip content</Tooltip>
+`,
+
+`
+<Button id="placement-left">Tooltip left</Button>
+
+<Button id="placement-top">Tooltip top</Button>
+
+<Button id="placement-bottom">Tooltip bottom</Button>
+
+<Button id="placement-right">Tooltip right</Button>
+
+<Tooltip triggeredBy="[id^='placement-']" {placement} on:show={(e)=> [, placement] = e.target.id.split('-')}>
+	Tooltip content - {placement}
 </Tooltip>
 `,
 
 `
-<Tooltip content="Tooltip content" theme="light">
-	<Button>Light tooltip</Button>
-</Tooltip>
+<Button id="hover">Tooltip hover</Button>
 
-<Tooltip content="Tooltip content" theme="dark">
-	<Button>Dark tooltip</Button>
-</Tooltip>
+<Button id="click">Tooltip click</Button>
+
+<Tooltip triggeredBy="#hover">Hover tooltip content</Tooltip>
+
+<Tooltip trigger="click" triggeredBy="#click">Click tooltip content</Tooltip>
 `,
 
 `
-<Tooltip content="Tooltip content" placement="top">
-	<Button>Tooltip top</Button>
-</Tooltip>
+<Button id="disable-arrow">Default tooltip</Button>
 
-<Tooltip content="Tooltip content" placement="right">
-	<Button>Tooltip right</Button>
-</Tooltip>
-
-<Tooltip content="Tooltip content" placement="bottom">
-	<Button>Tooltip bottom</Button>
-</Tooltip>
-
-<Tooltip content="Tooltip content" placement="left">
-	<Button>Tooltip left</Button>
-</Tooltip>
+<Tooltip arrow={false} triggeredBy='#disable-arrow'>Tooltip content</Tooltip>
 `,
 
 `
-<Tooltip content="Tooltip content" trigger="hover">
-	<Button>Tooltip hover</Button>
-</Tooltip>
+<Button>Green tooltip</Button>
 
-<Tooltip content="Tooltip content" trigger="click">
-	<Button>Tooltip click</Button>
-</Tooltip>
-`,
+<Tooltip color="success">Tooltip content</Tooltip>
 
-`
-<Tooltip content="Tooltip content" arrow={false}>
-	<Button>Default tooltip</Button>
-</Tooltip>
-`,
+<Button>Yellow tooltip</Button>
 
-`
+<Tooltip color="warning">Tooltip content</Tooltip>
+
+<Button>Custom style</Button>
+
 <Tooltip
-	content="tooltip content"
-	placement="auto"
-	tipClass="absolute inline-block rounded-lg p-24 text-lg font-medium shadow-sm text-white"
-	theme="custom"
-	tipColor="bg-red-900 dark:bg-red-700"
->
-	<Button>Custom style</Button>
+	placement="right"
+	style="custom"
+	defaultClass=""
+	class="p-4 text-lg font-medium bg-purple-500 text-gray-100"
+	arrow={false}
+	>
+	Tooltip content
 </Tooltip>
 `,
 	];
@@ -71,74 +81,80 @@
 <div class="pl-5 pr-5">
 	<DocSection class="mb-10" id="default-tooltip" title="Default tooltip" code={codeBlocks[0]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Tooltip content="Tooltip content">
-				<Button>Default tooltip</Button>
-			</Tooltip>
+			<Button>Default tooltip</Button>
+
+			<Tooltip>Tooltip content</Tooltip>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="tooltip-styles" title="Tooltip styles" code={codeBlocks[1]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Tooltip content="Tooltip content" theme="light">
-				<Button>Light tooltip</Button>
-			</Tooltip>
-			
-			<Tooltip content="Tooltip content" theme="dark">
-				<Button>Dark tooltip</Button>
-			</Tooltip>
+			<Button id="style-light">Light tooltip</Button>
+
+			<Button id="style-auto">Default tooltip</Button>
+
+			<Button id="style-dark">Dark tooltip</Button>
+
+			<Tooltip {style} triggeredBy="[id^='style-']" on:show={ev => style = ev.target.id.split('-')[1]}>Tooltip content</Tooltip>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="placement" title="Placement" code={codeBlocks[2]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Tooltip content="Tooltip content" placement="top">
-				<Button>Tooltip top</Button>
-			</Tooltip>
-			
-			<Tooltip content="Tooltip content" placement="right">
-				<Button>Tooltip right</Button>
-			</Tooltip>
+			<Button id="placement-left">Tooltip left</Button>
 
-			<Tooltip content="Tooltip content" placement="bottom">
-				<Button>Tooltip bottom</Button>
-			</Tooltip>
+			<Button id="placement-top">Tooltip top</Button>
 
-			<Tooltip content="Tooltip content" placement="left">
-				<Button>Tooltip left</Button>
+			<Button id="placement-bottom">Tooltip bottom</Button>
+
+			<Button id="placement-right">Tooltip right</Button>
+
+			<Tooltip triggeredBy="[id^='placement-']" {placement} on:show={(e)=> [, placement] = e.target.id.split('-')}>
+				Tooltip content - {placement}
 			</Tooltip>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="triggering" title="Triggering" code={codeBlocks[3]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Tooltip content="Tooltip content" trigger="hover">
-				<Button>Tooltip hover</Button>
-			</Tooltip>
-			
-			<Tooltip content="Tooltip content" trigger="click">
-				<Button>Tooltip click</Button>
-			</Tooltip>
+			<Button id="hover">Tooltip hover</Button>
+
+			<Button id="click">Tooltip click</Button>
+
+			<Tooltip triggeredBy="#hover">Hover tooltip content</Tooltip>
+
+			<Tooltip trigger="click" triggeredBy="#click">Click tooltip content</Tooltip>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="disable-arrow" title="Disable arrow" code={codeBlocks[4]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
-			<Tooltip content="Tooltip content" arrow={false}>
-				<Button>Default tooltip</Button>
-			</Tooltip>
+			<Button id="disable-arrow">Default tooltip</Button>
+
+			<Tooltip arrow={false} triggeredBy='#disable-arrow'>Tooltip content</Tooltip>
 		</div>
 	</DocSection>
 
 	<DocSection class="mb-10" id="custom-style" title="Custom style" code={codeBlocks[5]}>
 		<div slot="preview" class="flex flex-wrap items-center gap-2">
+			<Button>Green tooltip</Button>
+
+			<Tooltip color="success">Tooltip content</Tooltip>
+
+			<Button>Yellow tooltip</Button>
+
+			<Tooltip color="warning">Tooltip content</Tooltip>
+
+			<Button>Custom style</Button>
+
 			<Tooltip
-				content="tooltip content"
-				placement="auto"
-				tipClass="absolute inline-block rounded-lg p-24 text-lg font-medium shadow-sm text-white"
-				theme="custom"
-				tipColor="bg-red-900 dark:bg-red-700"
-			>
-				<Button>Custom style</Button>
+				placement="right"
+				style="custom"
+				defaultClass=""
+				class="p-4 text-lg font-medium bg-purple-500 text-gray-100"
+				arrow={false}
+				>
+				Tooltip content
 			</Tooltip>
 		</div>
 	</DocSection>
