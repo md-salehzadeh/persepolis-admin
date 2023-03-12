@@ -270,7 +270,7 @@
 `
 <SpeedDial defaultClass="absolute left-2 bottom-6" trigger="hover" tooltip="right">
 	<SpeedDialButton name="Share">
-			<Icon name="share-nodes" size="lg" />
+		<Icon name="share-nodes" size="lg" />
 	</SpeedDialButton>
 
 	<SpeedDialButton name="Print">
@@ -288,7 +288,7 @@
 
 <SpeedDial defaultClass="absolute right-6 bottom-6" trigger="click">
 	<SpeedDialButton name="Share">
-			<Icon name="share-nodes" size="lg" />
+		<Icon name="share-nodes" size="lg" />
 	</SpeedDialButton>
 
 	<SpeedDialButton name="Print">
@@ -570,7 +570,7 @@
 		<div slot="preview" class="relative h-72">
 			<SpeedDial defaultClass="absolute left-2 bottom-6" trigger="hover" tooltip="right">
 				<SpeedDialButton name="Share">
-						<Icon name="share-nodes" size="lg" />
+					<Icon name="share-nodes" size="lg" />
 				</SpeedDialButton>
 
 				<SpeedDialButton name="Print">
@@ -588,7 +588,7 @@
 
 			<SpeedDial defaultClass="absolute right-6 bottom-6" trigger="click">
 				<SpeedDialButton name="Share">
-						<Icon name="share-nodes" size="lg" />
+					<Icon name="share-nodes" size="lg" />
 				</SpeedDialButton>
 
 				<SpeedDialButton name="Print">
