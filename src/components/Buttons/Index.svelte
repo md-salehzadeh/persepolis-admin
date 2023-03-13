@@ -179,6 +179,7 @@
 <svelte:element
 	this={href ? 'a' : 'button'}
 	type={href ? undefined : type}
+	{href}
 	{...$$restProps}
 	class={buttonClass}
 	on:click
